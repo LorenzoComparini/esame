@@ -4,6 +4,7 @@
 ```
 cd client
 npm install
+yarn serve
 ```
 
 #### Configurazione server
@@ -26,4 +27,5 @@ cd server
 composer upgrade
 php artisan migrate
 php artisan db:seed
+php artisan serve
 ```
