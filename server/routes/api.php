@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('lands', [LandController::class, 'index']);
+Route::get('lands/{id}', [LandController::class, 'detail']);
+Route::post('lands', [LandController::class, 'create']);
+Route::post('lands/{id}', [LandController::class, 'edit']);
+Route::delete('lands/{id}', [LandController::class, 'delete']);
